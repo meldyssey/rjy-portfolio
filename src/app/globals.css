@@ -1,11 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --primary: rgb(83, 197, 207);
-  --neutral: rgb(163 163 163);
+  --primary: #3aa5aa;
+  --neutral: #7c7c7c;
 }
 
 body {
   background: #ffffff;
   color: #0a0a0a;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-neutral {
+  color: var(--neutral);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+
+.hover\:border-primary:hover {
+  border-color: var(--primary);
 }
