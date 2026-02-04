@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Experiences from "@/components/Experiences";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div>
       {/* Hero */}
@@ -21,11 +21,8 @@ export default function Home() {
         <p>소개 내용</p>
       </section>
 
-      {/* Experience */}
-      <section id="experience" className="mb-32">
-        <h2 className="mb-12 text-4xl font-bold">Work Experience</h2>
-        <p>경력</p>
-      </section>
+      {/* Experiences */}
+      <Experiences />
 
       {/* Projects */}
       <section id="projects" className="mb-32">
