@@ -1,4 +1,5 @@
 import Experiences from "@/components/Experiences";
+import Projects from "@/components/Projects";
 
 export default async function Home() {
   return (
@@ -25,10 +26,7 @@ export default async function Home() {
       <Experiences />
 
       {/* Projects */}
-      <section id="projects" className="mb-32">
-        <h2 className="mb-12 text-4xl font-bold">Projects</h2>
-        <p>프로젝트 내용</p>
-      </section>
+      <Projects />
     </div>
   );
 }

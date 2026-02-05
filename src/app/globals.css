@@ -18,6 +18,10 @@ body {
   background-color: var(--primary);
 }
 
+.bg-neutral {
+  background-color: var(--neutral);
+}
+
 .text-neutral {
   color: var(--neutral);
 }
