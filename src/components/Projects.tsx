@@ -57,14 +57,39 @@ export function ProjectItem({ ...project }: ProjectProps) {
             ))}
           </div>
 
-          {/* 상세보기 링크 - 왼쪽 영역 */}
-          <div className="mt-4">
+          {/* 버튼 그룹 */}
+          <div className="flex items-center justify-between gap-4 relative z-20">
+            {/* 상세보기 */}
             <Link
               href={`/projects/${project.slug}`}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:opacity-80 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-primary/90 transition-all"
             >
               상세보기 →
             </Link>
+
+            {/* GitHub & Demo */}
+            <div className="flex gap-2">
+              {project.github && (
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-sm font-medium bg-black text-white rounded-full hover:opacity-80 transition-all"
+                >
+                  GitHub →
+                </Link>
+              )}
+              {project.demo && (
+                <Link
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-sm font-medium bg-black text-white rounded-full hover:opacity-80 transition-all"
+                >
+                  Demo →
+                </Link>
+              )}
+            </div>
           </div>
         </div>
 
@@ -79,30 +104,6 @@ export function ProjectItem({ ...project }: ProjectProps) {
             />
           </div>
         )}
-
-        {/* GitHub & Demo 버튼 - 이미지 위에 표시 */}
-        <div className="absolute bottom-4 right-4 z-20 flex gap-2">
-          {project.github && (
-            <Link
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium bg-black text-white rounded-full hover:opacity-80 transition-all"
-            >
-              GitHub →
-            </Link>
-          )}
-          {project.demo && (
-            <Link
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium bg-black text-white rounded-full hover:opacity-80 transition-all"
-            >
-              Demo →
-            </Link>
-          )}
-        </div>
       </div>
     </article>
   );

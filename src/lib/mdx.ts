@@ -91,8 +91,6 @@ export function getPorjectBySlug(slug: string): ProjectData | null {
   const fileContents = fs.readFileSync(fullPath, "utf-8");
   const { data, content } = matter(fileContents);
 
-  console.log(data);
-
   return {
     metadata: data as ProjectMetadata,
     content,

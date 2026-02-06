@@ -49,7 +49,7 @@ export function ExperienceItem({ ...experience }: ExperienceProps) {
         {/* 상세보기 링크 */}
         <Link
           href={`/experience/${experience.slug}`}
-          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:opacity-80 transition-all"
         >
           상세보기 →
         </Link>
@@ -71,7 +71,7 @@ export default function Experiences() {
   }));
   return (
     <section id="experience" className="mb-32">
-      <h2 className="mb-12 text-4xl font-bold">Work Experience</h2>
+      <h2 className="mb-12 text-4xl font-bold">Work Experiences</h2>
       {experiences.map((experience) => (
         <ExperienceItem {...experience} key={experience.order} />
       ))}
