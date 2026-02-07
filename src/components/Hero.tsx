@@ -1,5 +1,6 @@
 "use client";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   const scrollToSkills = () => {
@@ -9,20 +10,61 @@ export default function Hero() {
   return (
     <section className="h-screen flex flex-col justify-center items-start relative">
       <div className="flex-1 flex flex-col justify-center">
-        <h1 className="text-6xl font-bold mb-4">안녕하세요 👋</h1>
-        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent animate-gradient">
-          저는 oo입니다
-        </h2>
-        <p className="text-2xl text-neutral">Frontend Developer</p>
+        <h1 className="text-4xl font-bold mb-4">
+          안녕하세요, 저는 Frontend 개발자
+        </h1>
+        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent animate-gradient">
+          류정윤입니다
+        </h1>
+        <p className="text-2xl text-neutral">
+          체계적인 구조화로 협업의 효율을 높이고,
+        </p>
+        <p className="text-2xl text-neutral mb-8">
+          기술로 사용자의 경험을 설계하는 개발자가 되고자 합니다.
+        </p>
+
+        {/* SNS 링크 */}
+        <div className="flex gap-4 items-center">
+          <a
+            href="https://github.com/your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+            aria-label="GitHub"
+          >
+            <Image
+              src="/icons/github.svg"
+              alt="GitHub"
+              width={40}
+              height={40}
+              className="opacity-80 hover:opacity-100"
+            />
+          </a>
+          <a
+            href="https://velog.io/@your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition-transform"
+            aria-label="Velog"
+          >
+            <Image
+              src="/icons/velog.svg"
+              alt="Velog"
+              width={40}
+              height={40}
+              className="opacity-80 hover:opacity-100"
+            />
+          </a>
+        </div>
       </div>
 
       {/* 스크롤 다운 인디케이터 */}
       <button
         onClick={scrollToSkills}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 bg-primary rounded-full text-white cursor-pointer animate-bounce hover:scale-125 transition-transform"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary cursor-pointer animate-bounce hover:scale-125 transition-transform"
         aria-label="Scroll to skills section"
       >
-        <ChevronDown className="w-10 h-10" />
+        <ChevronDown className="w-15 h-15" />
       </button>
     </section>
   );

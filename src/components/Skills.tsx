@@ -1,34 +1,34 @@
 export default function Skills() {
   const skills = {
     Frontend: [
-      { name: "React", color: "bg-[#61DAFB]" }, // React 브랜드 색상
-      { name: "Vue.js", color: "bg-[#42B883] text-white" }, // Vue 브랜드 색상
-      { name: "TypeScript", color: "bg-[#3178C6] text-white" }, // TS 브랜드 색상
-      { name: "JavaScript (ES6+)", color: "bg-[#F7DF1E]" }, // JS 브랜드 색상
-      { name: "jQuery", color: "bg-[#0769AD] text-white" }, // jQuery 브랜드 색상
-      { name: "HTML5", color: "bg-[#E34F26] text-white" }, // HTML5 브랜드 색상
-      { name: "CSS3", color: "bg-[#1572B6] text-white" }, // CSS3 브랜드 색상
-      { name: "SCSS", color: "bg-[#CC6699] text-white" }, // Sass 브랜드 색상
-      { name: "TailwindCSS", color: "bg-[#06B6D4] text-white" }, // Tailwind 브랜드 색상
+      { name: "React", color: "bg-[#61DAFB] text-black" }, // React 브랜드 색상
+      { name: "Vue.js", color: "bg-[#42B883]" }, // Vue 브랜드 색상
+      { name: "TypeScript", color: "bg-[#3178C6]" }, // TS 브랜드 색상
+      { name: "JavaScript (ES6+)", color: "bg-[#F7DF1E] text-black" }, // JS 브랜드 색상
+      { name: "jQuery", color: "bg-[#0769AD]" }, // jQuery 브랜드 색상
+      { name: "HTML5", color: "bg-[#E34F26]" }, // HTML5 브랜드 색상
+      { name: "CSS3", color: "bg-[#1572B6]" }, // CSS3 브랜드 색상
+      { name: "SCSS", color: "bg-[#CC6699]" }, // Sass 브랜드 색상
+      { name: "TailwindCSS", color: "bg-[#06B6D4]" }, // Tailwind 브랜드 색상
     ],
     "State Management": [
-      { name: "Redux", color: "bg-[#764ABC] text-white" }, // Redux 브랜드 색상
+      { name: "Redux", color: "bg-[#764ABC]" }, // Redux 브랜드 색상
     ],
     "Backend & Database": [
-      { name: "Node.js", color: "bg-[#339933] text-white" }, // Node.js 브랜드 색상
-      { name: "MariaDB", color: "bg-[#003545] text-white" }, // MariaDB 브랜드 색상
-      { name: "Firebase", color: "bg-[#FFCA28]" }, // Firebase 브랜드 색상
+      { name: "Node.js", color: "bg-[#339933]" }, // Node.js 브랜드 색상
+      { name: "MariaDB", color: "bg-[#003545]" }, // MariaDB 브랜드 색상
+      { name: "Firebase", color: "bg-[#FFCA28] text-black" }, // Firebase 브랜드 색상
     ],
     "Tools & Collaboration": [
-      { name: "Git", color: "bg-[#F05032] text-white" }, // Git 브랜드 색상
-      { name: "GitHub", color: "bg-[#181717] text-white" }, // GitHub 브랜드 색상
-      { name: "SVN", color: "bg-[#809CC9] text-white" }, // SVN 브랜드 색상
-      { name: "Slack", color: "bg-[#4A154B] text-white" }, // Slack 브랜드 색상
-      { name: "Notion", color: "bg-black text-white" }, // Notion 브랜드 색상
+      { name: "Git", color: "bg-[#F05032]" }, // Git 브랜드 색상
+      { name: "GitHub", color: "bg-[#181717]" }, // GitHub 브랜드 색상
+      { name: "SVN", color: "bg-[#809CC9]" }, // SVN 브랜드 색상
+      { name: "Slack", color: "bg-[#4A154B]" }, // Slack 브랜드 색상
+      { name: "Notion", color: "bg-black" }, // Notion 브랜드 색상
     ],
     Others: [
-      { name: "MQTT", color: "bg-[#660066] text-white" }, // MQTT 브랜드 색상
-      { name: "Chart.js", color: "bg-[#FF6384] text-white" }, // Chart.js 브랜드 색상
+      { name: "MQTT", color: "bg-[#660066]" }, // MQTT 브랜드 색상
+      { name: "Chart.js", color: "bg-[#FF6384]" }, // Chart.js 브랜드 색상
     ],
   };
 
@@ -57,7 +57,7 @@ export default function Skills() {
                 <span className="text-4xl">
                   {categoryIcons[category as keyof typeof categoryIcons]}
                 </span>
-                <h3 className="text-xl font-bold">{category}</h3>
+                <h3 className="text-xl text-secondary font-bold">{category}</h3>
               </div>
 
               {/* 배지들 */}

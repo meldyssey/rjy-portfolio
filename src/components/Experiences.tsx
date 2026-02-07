@@ -7,18 +7,18 @@ export function ExperienceItem({ ...experience }: ExperienceProps) {
   return (
     <article className="relative pl-8 border-l-2 border-gray-200">
       {/* 타임라인 점 */}
-      <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-primary border-4 border-white"></div>
+      <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-primary border-2 border-white"></div>
 
       {/* 내용 */}
       <div className="pb-8">
         <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
-          <h3 className="text-xl font-bold text-gray-900">
+          <h3 className="text-xl text-primary font-bold">
             {experience.company}
           </h3>
           <span className="text-sm text-neutral">{experience.period}</span>
         </div>
 
-        <p className="text-lg font-medium text-primary mb-4">
+        <p className="text-lg font-medium text-neutral mb-4">
           {experience.position}
         </p>
 
@@ -27,7 +27,7 @@ export function ExperienceItem({ ...experience }: ExperienceProps) {
           {experience.summary.map((item, i) => (
             <li key={i} className="flex gap-3">
               <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400"></span>
-              <span className="text-neutral">{item}</span>
+              <span>{item}</span>
             </li>
           ))}
         </ul>
@@ -49,7 +49,7 @@ export function ExperienceItem({ ...experience }: ExperienceProps) {
         {/* 상세보기 링크 */}
         <Link
           href={`/experience/${experience.slug}`}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:opacity-80 transition-all"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-secondary rounded-full hover:opacity-80 transition-all"
         >
           상세보기 →
         </Link>

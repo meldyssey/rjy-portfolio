@@ -53,26 +53,35 @@
 }
 
 :root {
-  --primary: #3aa5aa;
-  --neutral: #5e5e5e;
+  --primary: #64ccc5;
+  --secondary: #001c30;
+  --neutral: #dafffb;
 }
 
 body {
-  background: #ffffff;
-  color: #0a0a0a;
+  background: var(--secondary);
+  color: #ffffff;
   font-family: "SpoqaHanSansNeo", sans-serif;
-}
-
-.text-primary {
-  color: var(--primary);
 }
 
 .bg-primary {
   background-color: var(--primary);
 }
 
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
 .bg-neutral {
   background-color: var(--neutral);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
 }
 
 .text-neutral {
@@ -81,6 +90,10 @@ body {
 
 .border-primary {
   border-color: var(--primary);
+}
+
+.border-neutral {
+  border-color: var(--neutral);
 }
 
 .hover\:text-primary:hover {
@@ -92,9 +105,14 @@ body {
 }
 
 .prose {
+  --tw-prose-body: #ffffff;
+  --tw-prose-headings: #ffffff;
   --tw-prose-bullets: var(--primary);
   --tw-prose-links: var(--primary);
   --tw-prose-bold: var(--primary);
+  --tw-prose-code: #ffffff;
+  --tw-prose-pre-code: #ffffff;
+  --tw-prose-quotes: #ffffff;
 }
 
 @keyframes fadeInUp {

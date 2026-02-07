@@ -24,7 +24,7 @@ export function ProjectItem({ ...project }: ProjectProps) {
         <div className="flex-1 p-6 relative z-10">
           {/* 제목 & 기간 */}
           <div className="mb-3">
-            <h3 className="text-xl font-bold text-gray-900 mb-1">
+            <h3 className="text-xl text-primary font-bold mb-1">
               {project.title}
             </h3>
             <p className="text-sm text-neutral">{project.period}</p>
@@ -40,7 +40,7 @@ export function ProjectItem({ ...project }: ProjectProps) {
             {project.summary.map((item, i) => (
               <li key={i} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-400"></span>
-                <span className="text-neutral">{item}</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
@@ -62,7 +62,7 @@ export function ProjectItem({ ...project }: ProjectProps) {
             {/* 상세보기 */}
             <Link
               href={`/project/${project.slug}`}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-primary/90 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-secondary rounded-full hover:opacity-80 transition-all"
             >
               상세보기 →
             </Link>
