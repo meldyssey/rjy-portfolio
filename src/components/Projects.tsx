@@ -124,7 +124,7 @@ export default function Projects() {
     slug: proj.slug,
   }));
   return (
-    <section id="projects" className="mb-20 scroll-mt-5">
+    <section id="projects" className="mb-20  scroll-mt-20 md:scroll-mt-5">
       <h2 className="mb-12 text-4xl font-bold">Projects</h2>
       {projects.map((experience) => (
         <ProjectItem {...experience} key={experience.order} />

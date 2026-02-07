@@ -41,7 +41,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="mb-20 scroll-mt-5">
+    <section id="skills" className="mb-20 scroll-mt-20 md:scroll-mt-5">
       <h2 className="mb-12 text-4xl font-bold">Skills</h2>
 
       {/* 스킬 카드 */}

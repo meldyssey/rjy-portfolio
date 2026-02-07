@@ -2,13 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollTo = (e: React.MouseEvent<HTMLDivElement>, part: string) => {
     e.preventDefault();
+    setIsMobileMenuOpen(false); // 메뉴 클릭 시 모바일 메뉴 닫기
     document.getElementById(part)?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -33,7 +36,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 z-50 bg-secondary backdrop-blur-sm ${isVisible ? "top-0" : "-top-20"}`}
+      className={`fixed left-0 right-0 z-50 bg-secondary backdrop-blur-sm transition-all duration-300 ${isVisible ? "top-0" : "md:-top-20 top-0"}`}
     >
       <div className="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
         {/* 로고 */}
@@ -41,8 +44,8 @@ export default function Header() {
           RJY-Portfolio
         </Link>
 
-        {/* 네비게이션 */}
-        <nav className="flex gap-8">
+        {/* 데스크톱 네비게이션 */}
+        <nav className="hidden md:flex gap-8">
           <div
             onClick={(e) => scrollTo(e, "skills")}
             className="text-md font-bold text-neutral hover:text-primary border-b-2 border-transparent hover:border-primary transition-all cursor-pointer"
@@ -51,13 +54,54 @@ export default function Header() {
           </div>
           <div
             onClick={(e) => scrollTo(e, "experiences")}
-            className="text-md font-bold text-neutral hover:text-primary border-b-2 border-transparent hover:border-primary transition-all"
+            className="text-md font-bold text-neutral hover:text-primary border-b-2 border-transparent hover:border-primary transition-all cursor-pointer"
           >
             Experiences
           </div>
           <div
             onClick={(e) => scrollTo(e, "projects")}
-            className="text-md font-bold text-neutral hover:text-primary border-b-2 border-transparent hover:border-primary transition-all"
+            className="text-md font-bold text-neutral hover:text-primary border-b-2 border-transparent hover:border-primary transition-all cursor-pointer"
+          >
+            Projects
+          </div>
+        </nav>
+
+        {/* 햄버거 버튼 (태블릿 이하) */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-neutral hover:text-primary transition-colors"
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+
+      {/* 모바일 메뉴 */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          isMobileMenuOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col bg-secondary border-b border-gray-200">
+          <div
+            onClick={(e) => scrollTo(e, "skills")}
+            className="px-6 py-3 text-md font-bold text-neutral hover:text-primary hover:bg-gray-50 transition-all cursor-pointer"
+          >
+            Skills
+          </div>
+          <div
+            onClick={(e) => scrollTo(e, "experiences")}
+            className="px-6 py-3 text-md font-bold text-neutral hover:text-primary hover:bg-gray-50 transition-all cursor-pointer"
+          >
+            Experiences
+          </div>
+          <div
+            onClick={(e) => scrollTo(e, "projects")}
+            className="px-6 py-3 text-md font-bold text-neutral hover:text-primary hover:bg-gray-50 transition-all cursor-pointer"
           >
             Projects
           </div>

@@ -70,7 +70,7 @@ export default function Experiences() {
     slug: exp.slug,
   }));
   return (
-    <section id="experiences" className="mb-20 scroll-mt-5">
+    <section id="experiences" className="mb-20  scroll-mt-20 md:scroll-mt-5">
       <h2 className="mb-12 text-4xl font-bold">Work Experiences</h2>
       {experiences.map((experience) => (
         <ExperienceItem {...experience} key={experience.order} />
