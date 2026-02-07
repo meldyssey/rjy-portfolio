@@ -61,7 +61,7 @@ export function ProjectItem({ ...project }: ProjectProps) {
           <div className="flex items-center justify-between gap-4 relative z-20">
             {/* 상세보기 */}
             <Link
-              href={`/projects/${project.slug}`}
+              href={`/project/${project.slug}`}
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-primary/90 transition-all"
             >
               상세보기 →

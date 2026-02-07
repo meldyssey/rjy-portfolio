@@ -1,5 +1,6 @@
 import Experiences from "@/components/Experiences";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 export default async function Home() {
   return (
@@ -16,11 +17,8 @@ export default async function Home() {
         </button>
       </section>
 
-      {/* About */}
-      <section id="about" className="mb-32">
-        <h2 className="mb-12 text-4xl font-bold">About</h2>
-        <p>소개 내용</p>
-      </section>
+      {/*  Skills */}
+      <Skills />
 
       {/* Experiences */}
       <Experiences />

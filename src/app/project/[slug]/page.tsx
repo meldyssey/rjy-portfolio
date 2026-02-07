@@ -1,4 +1,4 @@
-import { getExperienceBySlug } from "@/lib/mdx";
+import { getPorjectBySlug } from "@/lib/mdx";
 import { mdxComponents } from "@/lib/mdx-components";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
@@ -10,23 +10,23 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const experience = getExperienceBySlug(slug);
+  const project = getPorjectBySlug(slug);
 
-  if (!experience) {
+  if (!project) {
     notFound();
   }
 
-  const { metadata, content } = experience;
+  const { metadata, content } = project;
 
   return (
     <article className="prose py-12">
       {/* 헤더 */}
       <div className="mb-8 pb-6 border-b border-gray-200">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          {metadata.company}
+          {metadata.title}
         </h1>
         <p className="text-xl text-primary font-medium mb-2">
-          {metadata.position}
+          {metadata.description}
         </p>
         <p className="text-sm text-neutral">{metadata.period}</p>
         {/* 기술 스택 */}

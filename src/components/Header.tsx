@@ -12,10 +12,10 @@ export default function Header() {
         {/* 네비게이션 */}
         <nav className="flex gap-8">
           <Link
-            href="#about"
+            href="#skills"
             className="text-sm font-bold text-neutral hover:text-primary border-b-2 border-transparent hover:border-primary transition-all"
           >
-            About
+            Skills
           </Link>
           <Link
             href="#experience"
