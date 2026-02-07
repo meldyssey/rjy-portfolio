@@ -19,7 +19,7 @@ export default async function Page({
   const { metadata, content } = project;
 
   return (
-    <article className="prose py-12">
+    <article className="prose pt-20 py-12">
       {/* 헤더 */}
       <div className="mb-8 pb-6 border-b border-gray-200">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
