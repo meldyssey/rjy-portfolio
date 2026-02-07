@@ -2,7 +2,6 @@ import { getPorjectBySlug } from "@/lib/mdx";
 import { mdxComponents } from "@/lib/mdx-components";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
-import BackButton from "@/components/BackButton";
 import React from "react";
 
 export default async function Page({

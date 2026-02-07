@@ -1,4 +1,3 @@
-import BackButton from "@/components/BackButton";
 import { getExperienceBySlug } from "@/lib/mdx";
 import { mdxComponents } from "@/lib/mdx-components";
 import { MDXRemote } from "next-mdx-remote/rsc";

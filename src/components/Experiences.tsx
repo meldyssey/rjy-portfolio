@@ -1,5 +1,5 @@
 import { getAllExperiences } from "@/lib/mdx";
-import { ExperienceData, ExperienceMetadata, ExperienceProps } from "@/types";
+import { ExperienceProps } from "@/types";
 import Link from "next/link";
 import React from "react";
 
