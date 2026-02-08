@@ -46,13 +46,14 @@ export function ExperienceItem({ ...experience }: ExperienceProps) {
           </div>
         </div>
 
-        {/* 상세보기 링크 */}
-        <Link
-          href={`/experience/${experience.slug}`}
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-secondary rounded-full hover:opacity-80 transition-all"
-        >
-          상세보기 →
-        </Link>
+        {experience.content && (
+          <Link
+            href={`/experience/${experience.slug}`}
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-secondary rounded-full hover:opacity-80 transition-all"
+          >
+            상세보기 →
+          </Link>
+        )}
       </div>
     </article>
   );
@@ -67,6 +68,7 @@ export default function Experiences() {
     order: exp.metadata.order,
     summary: exp.metadata.summary,
     techStack: exp.metadata.techStack,
+    content: exp.content,
     slug: exp.slug,
   }));
   return (

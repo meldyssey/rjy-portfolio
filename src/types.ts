@@ -15,6 +15,7 @@ export interface ExperienceData {
 }
 
 export interface ExperienceProps extends ExperienceMetadata {
+  content: string;
   slug: string;
 }
 
