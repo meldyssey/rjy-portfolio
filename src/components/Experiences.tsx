@@ -33,18 +33,20 @@ export function ExperienceItem({ ...experience }: ExperienceProps) {
         </ul>
 
         {/* 기술 스택 */}
-        <div className="mb-4">
-          <div className="flex flex-wrap gap-2">
-            {experience.techStack.map((tech, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
-              >
-                {tech}
-              </span>
-            ))}
+        {experience.techStack && (
+          <div className="mb-4">
+            <div className="flex flex-wrap gap-2">
+              {experience.techStack.map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {experience.content && (
           <Link
