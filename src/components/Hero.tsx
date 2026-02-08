@@ -1,11 +1,24 @@
 "use client";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Hero() {
+  const [isCopied, setIsCopied] = useState(false);
+
   const scrollToSkills = () => {
     const skillsSection = document.getElementById("skills");
     skillsSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("your@email.com");
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
   };
   return (
     <section className="h-screen flex flex-col justify-center items-start relative">
@@ -23,7 +36,20 @@ export default function Hero() {
           기술로 사용자의 경험을 설계하는 개발자가 되고자 합니다.
         </p>
 
-        {/* SNS 링크 */}
+        <div className="flex items-center gap-2 text-lg text-neutral mb-6">
+          <Mail className="w-5 h-5" />
+          <button
+            onClick={copyEmail}
+            className="hover:text-primary transition-colors relative group"
+          >
+            your@email.com
+            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              {isCopied ? "복사됨✓" : "클릭해서 복사"}
+            </span>
+          </button>
+        </div>
+
+        {/* 연락처 & SNS 링크 */}
         <div className="flex gap-4 items-center">
           <a
             href="https://github.com/your-username"
