@@ -19,7 +19,7 @@ export default async function Page({
   const { metadata, content } = experience;
 
   return (
-    <article className="prose max-w-4xl mx-auto px-6 py-12">
+    <article className="prose max-w-4xl mx-auto py-12">
       {/* 헤더 */}
       <div className="mb-8 pb-6 border-b border-gray-200">
         <h1 className="text-3xl font-bold mb-2">{metadata.company}</h1>

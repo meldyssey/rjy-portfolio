@@ -26,7 +26,7 @@ export default function Hero() {
         <h1 className="text-4xl font-bold mb-4">
           안녕하세요, 저는 Frontend 개발자
         </h1>
-        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent animate-gradient">
+        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent animate-gradient">
           류정윤입니다
         </h1>
         <p className="text-2xl text-neutral">

@@ -58,11 +58,11 @@ export function ProjectItem({ ...project }: ProjectProps) {
           </div>
 
           {/* 버튼 그룹 */}
-          <div className="flex items-center justify-between gap-4 relative z-20">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative z-20">
             {/* 상세보기 */}
             <Link
               href={`/project/${project.slug}`}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-secondary rounded-full hover:opacity-80 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium bg-primary text-secondary rounded-full hover:opacity-80 transition-all"
             >
               상세보기 →
             </Link>
@@ -74,7 +74,7 @@ export function ProjectItem({ ...project }: ProjectProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 text-sm font-medium bg-black text-white rounded-full hover:opacity-80 transition-all"
+                  className="flex-1 sm:flex-none px-4 py-2 border-2 border-primary bg-secondary md:border-none text-sm font-medium text-center bg-black text-white rounded-full hover:opacity-80 transition-all"
                 >
                   GitHub →
                 </Link>
@@ -84,7 +84,7 @@ export function ProjectItem({ ...project }: ProjectProps) {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 text-sm font-medium bg-black text-white rounded-full hover:opacity-80 transition-all"
+                  className="flex-1 sm:flex-none px-4 py-2 border-2 border-primary bg-secondary md:border-none text-sm font-medium text-center text-white rounded-full hover:opacity-80 transition-all"
                 >
                   Demo →
                 </Link>
