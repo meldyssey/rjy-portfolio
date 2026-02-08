@@ -8,8 +8,14 @@ import {
   ProjectMetadata,
 } from "@/types";
 
+// contents/ (로컬 실제 데이터) 또는 src/content/ (더미 데이터)
+const CONTENT_DIR = process.env.CONTENT_PATH || "src/content";
+
 // Experiences
-const experienceDirectory = path.join(process.cwd(), "src/content/experiences");
+const experienceDirectory = path.join(
+  process.cwd(),
+  `${CONTENT_DIR}/experiences`,
+);
 
 export function getAllExperiences(): ExperienceData[] {
   if (!fs.existsSync(experienceDirectory)) {
@@ -53,7 +59,7 @@ export function getExperienceBySlug(slug: string): ExperienceData | null {
 }
 
 // Projects
-const projectDirectory = path.join(process.cwd(), "src/content/projects");
+const projectDirectory = path.join(process.cwd(), `${CONTENT_DIR}/projects`);
 
 export function getAllProjects(): ProjectData[] {
   if (!fs.existsSync(projectDirectory)) {

@@ -36,7 +36,7 @@ yarn-error.log*
 # content
 /src/contents
 /public/project
-/public/experiece
+/public/experience
 
 # vercel
 .vercel
