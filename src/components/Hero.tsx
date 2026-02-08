@@ -52,7 +52,7 @@ export default function Hero() {
         {/* 연락처 & SNS 링크 */}
         <div className="flex gap-4 items-center">
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/meldyssey"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:scale-110 transition-transform"
@@ -67,7 +67,7 @@ export default function Hero() {
             />
           </a>
           <a
-            href="https://velog.io/@your-username"
+            href="https://velog.io/@melcoding"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:scale-110 transition-transform"
