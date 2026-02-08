@@ -17,12 +17,6 @@ export default function Footer() {
               GitHub
             </Link>
             <Link
-              href="mailto:rjy115@gmail.com"
-              className="text-sm text-neutral hover:text-primary transition-colors"
-            >
-              Email
-            </Link>
-            <Link
               href="https://velog.io/@melcoding"
               className="text-sm text-neutral hover:text-primary transition-colors"
             >
